@@ -1,0 +1,46 @@
+.navbar-nav .nav-item .nav-link {
+  border-radius: 18px; /* Membuat sudut kotak menjadi rounded */
+  transition: background-color 0.3s ease; /* Efek transisi saat perubahan warna latar belakang */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+
+.carousel {
+  margin-top: 60px; /* Mengatur jarak antara carousel dengan navbar */
+}
+/* ZOOM CARD */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.02);
+}
+/* Margin Card */
+.produk .deskripsi {
+  margin-top: 30rem;
+  text-align: center;
+}
+
+.produk .tombol {
+  margin-top: 14.5rem;
+  text-align: center;
+}
+
+.produk .tombolpr {
+  margin-top: 10.5rem;
+  text-align: center;
+}
+
+.s24 .judul {
+  margin-left: 6rem;
+}
+.s24 .judul h1 {
+  font-size: 50px;
+}
+.card {
+  border: none;
+}
