@@ -8,6 +8,13 @@
   color: white;
 }
 
+body {
+  font-family: "Samsung Sharp Sans", sans-serif !important;
+}
+body p {
+  font-weight: 400;
+}
+
 .carousel {
   margin-top: 60px; /* Mengatur jarak antara carousel dengan navbar */
 }
@@ -50,6 +57,27 @@
 .flip .judul h1 {
   font-size: 50px;
 }
+
+.case .judul {
+  left: 100px;
+  bottom: 200px;
+}
+.case .judul h1 {
+  font-size: 50px;
+}
+
+.ear .judul {
+  left: 100px;
+  bottom: 200px;
+}
+.ear .judul h1 {
+  font-size: 50px;
+}
+
 .card {
   border: none;
+}
+
+.btn {
+  color: darkolivegreen;
 }
