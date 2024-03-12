@@ -67,51 +67,7 @@ function upload()
     return $namaFileBaru;
 }
 
-// Fungsi Upload Gambar HP
-function uploadacc()
-{
-    $namaFile = $_FILES['gambar']['name'];
-    $ukuranFile = $_FILES['gambar']['size'];
-    $error = $_FILES['gambar']['error'];
-    $tmpName = $_FILES['gambar']['tmp_name'];
 
-    // cek apakah tidak ada gambar yang diupload
-    if ($error === 4) {
-        echo "<script>
-                alert('Pilih gambar terlebih dahulu');
-            </script>";
-        return false;
-    }
-
-    // cek apakah yang diupload adalah gambar
-    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
-    $ekstensiGambar = explode('.', $namaFile);
-    $ekstensiGambar = strtolower(end($ekstensiGambar));
-    if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
-        echo "<script>
-                alert('Yang anda upload bukan gambar');
-            </script>";
-        return false;
-    }
-
-    // cek jika ukurannya terlalu besar
-    if ($ukuranFile > 10000000) {
-        echo "<script>
-                alert('Ukuran gambar terlalu besar');
-            </script>";
-        return false;
-    }
-
-    // lolos pengecekan, gambar siap diupload
-    // generate nama gambar baru
-    $namaFileBaru = uniqid();
-    $namaFileBaru .= '.';
-    $namaFileBaru .= $ekstensiGambar;
-
-    move_uploaded_file($tmpName, 'accimg/' . $namaFileBaru);
-
-    return $namaFileBaru;
-}
 
 // Fungsi tambah data HP
 function tambah($data)
@@ -182,5 +138,51 @@ function hapusacc($id)
     $query = "DELETE FROM aksesoris where id = $id";
     $sukses = mysqli_query($koneksi, $query);
     return $sukses;
+}
+
+
+function edithp($data)
+{
+    global $koneksi;
+    $id = $data['id'];
+    $merk = htmlspecialchars($data['merk']);
+    $nama = htmlspecialchars($data['nama']);
+    $tipe = htmlspecialchars($data['tipe']);
+    $warna = htmlspecialchars($data['warna']);
+    $ram = htmlspecialchars($data['ram']);
+    $rom = htmlspecialchars($data['rom']);
+    $harga = htmlspecialchars($data['harga']);
+    $gambarLama = htmlspecialchars($data['gambarLama']);// Pastikan fungsi upload() berjalan dengan benar
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambarLama;
+    } else {
+        $gambar = upload();
+    }
+    $deskripsi = htmlspecialchars($data['desc']);
+
+    $query = "UPDATE produkhp SET merk = '$merk', nama = '$nama', tipe = '$tipe', warna = '$warna', ram = '$ram', rom = '$rom', harga = '$harga', gambar = '$gambar', deskripsi = '$deskripsi' WHERE id = $id";
+    $result = mysqli_query($koneksi, $query);
+    return $result;
+}
+
+function editacc($data)
+{
+    global $koneksi;
+    $id = $data['id'];
+    $nama = htmlspecialchars($data['nama']);
+    $jenis = htmlspecialchars($data['jenis']);
+    $warna = htmlspecialchars($data['warna']);
+    $harga = htmlspecialchars($data['harga']);
+    $gambarLama = htmlspecialchars($data['gambarLama']);// Pastikan fungsi upload() berjalan dengan benar
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambarLama;
+    } else {
+        $gambar = upload();
+    }
+    $deskripsi = htmlspecialchars($data['desc']);
+
+    $query = "UPDATE aksesoris SET  nama = '$nama', jenis = '$jenis', warna = '$warna', harga = '$harga', gambar = '$gambar', deskripsi = '$deskripsi' WHERE id = $id";
+    $result = mysqli_query($koneksi, $query);
+    return $result;
 }
 ?>

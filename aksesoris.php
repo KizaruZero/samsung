@@ -7,6 +7,9 @@ $casehp = query("SELECT * FROM aksesoris WHERE jenis = '$case' ");
 $ear = "earphone";
 $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
 
+$jam = "jam";
+$watch = query("SELECT * FROM aksesoris WHERE jenis = '$jam' ");
+
 
 ?>
 
@@ -87,7 +90,7 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
                 <div class="row my-2">
                     <div class="col">
                         <div class="card rounded-4  border-0">
-                            <img src="assetAcc/casehitam.png" class="card-img-top img-fluid rounded-4" alt="..." />
+                            <img src="assetAcc/Case/casehitam.png" class="card-img-top img-fluid rounded-4" alt="..." />
                             <div class="text-center d-none d-lg-block mt-2">
                                 <h5 class="card-title fw-bold">Galaxy S24 Ultra Smart View Wallet Case</h5>
                                 <a href="#case" class="btn btn-dark text-white rounded-5 my-2">Beli sekarang</a>
@@ -96,7 +99,7 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
                     </div>
                     <div class="col">
                         <div class="card rounded-4  border-0">
-                            <img src="assetAcc/bud2.png" class="card-img-top img-fluid rounded-4" alt="..." />
+                            <img src="assetAcc/Buds/bud2.png" class="card-img-top img-fluid rounded-4" alt="..." />
                             <div class="text-center d-none d-lg-block mt-2">
                                 <h5 class="card-title fw-bold">Galaxy Buds2 Pro</h5>
                                 <a href="#ear" class="btn btn-dark text-white rounded-5 my-2">Beli sekarang</a>
@@ -105,7 +108,7 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
                     </div>
                     <div class="col">
                         <div class="card rounded-4  border-0">
-                            <img src="assetAcc/flipsuit.png" class="card-img-top img-fluid rounded-4" alt="..." />
+                            <img src="assetAcc/Case/flipsuit.png" class="card-img-top img-fluid rounded-4" alt="..." />
                             <div class="text-center d-none d-lg-block mt-2">
                                 <h5 class="card-title fw-bold">Galaxy S24 Ultra Flipsuit Case</h5>
                                 <a href="#case" class="btn btn-dark text-white rounded-5 my-2">Beli sekarang</a>
@@ -148,7 +151,7 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
                                 <p class="card-text fw-semibold">
                                     <?= "Rp " . number_format($case["harga"], 0, ',', '.'); ?>
                                 </p>
-                                <a href="transaksi.php?id=<?= $case["id"]; ?>" class="btn btn-dark rounded-5">Buy
+                                <a href="transaksiacc.php?id=<?= $case["id"]; ?>" class="btn btn-dark rounded-5">Buy
                                     Now</a>
                             </div>
                         </div>
@@ -164,7 +167,6 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
         <div class="container">
             <div class="cover my-3 position-relative">
                 <img src="assetAcc/coverear.png" alt="" class="d-block w-100 img-fluid" />
-
             </div>
             <div class="row text-center my-3">
                 <?php foreach ($earphone as $ear): ?>
@@ -181,7 +183,7 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
                                 <p class="card-text fw-semibold">
                                     <?= "Rp " . number_format($ear["harga"], 0, ',', '.'); ?>
                                 </p>
-                                <a href="transaksi.php?id=<?= $ear["id"]; ?>" class="btn btn-dark rounded-5">Buy
+                                <a href="transaksiacc.php?id=<?= $ear["id"]; ?>" class="btn btn-dark rounded-5">Buy
                                     Now</a>
                             </div>
                         </div>
@@ -190,7 +192,45 @@ $earphone = query("SELECT * FROM aksesoris WHERE jenis = '$ear' ");
             </div>
         </div>
     </section>
-    <!-- Galaxy Z Ends -->
+    <!-- Earphone Ends -->
+
+    <!-- Watch -->
+    <section id="ear" class="ear">
+        <div class="container">
+            <div class="cover my-3 position-relative">
+                <img src="assetAcc/coverJam.jpg" alt="" class="d-block w-100 img-fluid" />
+                <div class="judul position-absolute d-none d-lg-block">
+                    <h1 class="fw-bold">Galaxy Watch Series</h1>
+                    <p>Customize to suit your personality
+                    </p>
+                    <a href="#" class="btn btn-dark fw-bold rounded-5 py-2 px-4 mt-1">See All</a>
+                </div>
+            </div>
+            <div class="row text-center my-3">
+                <?php foreach ($watch as $jam): ?>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+                        <div class="card rounded-5 border-0">
+                            <img src="dimg/<?= $jam["gambar"]; ?>" class=" card-img-top rounded-5" alt="..." />
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">
+                                    <?= $jam["nama"]; ?>
+                                </h5>
+                                <h6>
+                                    <?= $jam["warna"]; ?>
+                                </h6>
+                                <p class="card-text fw-semibold">
+                                    <?= "Rp " . number_format($jam["harga"], 0, ',', '.'); ?>
+                                </p>
+                                <a href="transaksiacc.php?id=<?= $jam["id"]; ?>" class="btn btn-dark rounded-5">Buy
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <!-- Watch Ends -->
     <!-- Produk Ends -->
 
     <!-- Javascript -->

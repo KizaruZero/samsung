@@ -93,13 +93,13 @@ $aksesoris = query("SELECT * FROM aksesoris"); // query data produk
                                     <?= $row["deskripsi"]; ?>
                                 </td>
                                 <td>
-                                    <a href="edit.php?id=<?= $row["id"]; ?>" class="btn btn-warning mb-1">Edit</a>
+                                    <a href="edithp.php?id=<?= $row["id"]; ?>" class="btn btn-warning mb-1">Edit</a>
                                     <a href="hapus.php?id=<?= $row["id"]; ?>"
                                         onclick="return confirm('Anda yakin ingin menghapus data?');"
                                         class="btn btn-danger mb-3">Delete</a>
                                 </td>
                             </tr>
-                            <?php $nomor++; // Increment nomor di dalam loop                                                                                                                                                                 ?>
+                            <?php $nomor++; // Increment nomor di dalam loop                                                                                                                                                                       ?>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
@@ -150,13 +150,13 @@ $aksesoris = query("SELECT * FROM aksesoris"); // query data produk
                                     <?= $row["deskripsi"]; ?>
                                 </td>
                                 <td>
-                                    <a href="edit.php?id=<?= $row["id"]; ?>" class="btn btn-warning">Edit</a>
+                                    <a href="editacc.php?id=<?= $row["id"]; ?>" class="btn btn-warning mb-1">Edit</a>
                                     <a href="hapusacc.php?id=<?= $row["id"]; ?>"
                                         onclick="return confirm('Anda yakin ingin menghapus data?');"
                                         class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
-                            <?php $nomor++; // Increment nomor di dalam loop                                                                                                                                                                 ?>
+                            <?php $nomor++; // Increment nomor di dalam loop                                                                                                                                                                       ?>
                         <?php endforeach; ?>
                     </tbody>
                 </table>

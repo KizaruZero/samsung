@@ -3,7 +3,7 @@ require 'fungsi.php';
 
 $id = $_GET["id"];
 
-$beli = query("SELECT * FROM produkhp WHERE id = '$id'")[0];
+$beli = query("SELECT * FROM aksesoris WHERE id = '$id'")[0];
 
 $totalharga = $beli["harga"];
 $buds2pro = 4999000;
@@ -44,7 +44,7 @@ if (isset($_POST['tambah'])) {
                 <h1>Barang Yang Anda Beli :</h1>
             </div>
             <div class="data">
-                <h1 class="text-center">SPESIFIKASI HANDPHONE</h1>
+                <h1 class="text-center">DETAIL AKSESORIS</h1>
                 <div class="card mb-3 border-0">
                     <div class="row g-0">
                         <div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -55,39 +55,21 @@ if (isset($_POST['tambah'])) {
                                 <table class="table">
                                     <tbody>
                                         <tr>
-                                            <th scope="row">Merk Produk</th>
-                                            <td>
-                                                <?= $beli["merk"]; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <th scope="row">Nama Produk</th>
                                             <td>
                                                 <?= $beli["nama"]; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Tipe Produk</th>
+                                            <th scope="row">Jenis Produk</th>
                                             <td>
-                                                <?= $beli["tipe"]; ?>
+                                                <?= $beli["jenis"]; ?>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Warna Produk</th>
                                             <td>
                                                 <?= $beli["warna"]; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">RAM</th>
-                                            <td>
-                                                <?= $beli["ram"]; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ROM</th>
-                                            <td>
-                                                <?= $beli["rom"]; ?>
                                             </td>
                                         </tr>
                                         <tr>
@@ -103,32 +85,6 @@ if (isset($_POST['tambah'])) {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Bundling</th>
-                                            <td>
-                                                <div class="row text-center">
-                                                    <p class="text-danger fw-medium">*Discount 5% total dengan bundling
-                                                        item!
-                                                    </p>
-                                                    <div class="col">
-                                                        <img src="assetAcc/Buds/bud2.png" alt="" width="200px">
-                                                        <h6 class="mt-1">Galaxy Buds Pro 2</h6>
-                                                        <?= "Rp " . number_format($buds2pro, 0, ',', '.'); ?>
-                                                    </div>
-                                                    <div class="col">
-                                                        <img src="assetAcc/Case/flipsuit.png" alt="" width="200px">
-                                                        <h6 class="mt-1">Galaxy S24 Ultra Flipsuit Case</h6>
-                                                        <?= "Rp " . number_format($softcase, 0, ',', '.'); ?>
-                                                    </div>
-                                                    <form action="" method="POST">
-                                                        <button type="submit" name="tambah"
-                                                            class="btn btn-dark align-items-center rounded-4 mt-1">Tambah
-                                                            Bundling</button>
-                                                    </form>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
                                             <th scope="row">Total Harga</th>
                                             <td>
                                                 <?= "Rp " . number_format($totalharga, 0, ',', '.'); ?>
@@ -136,8 +92,6 @@ if (isset($_POST['tambah'])) {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <!-- Hidden input untuk menyimpan total harga -->
-                                </form>
                             </div>
                         </div>
                     </div>

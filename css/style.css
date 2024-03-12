@@ -42,42 +42,27 @@ body p {
   text-align: center;
 }
 
-.s24 .judul {
-  left: 100px;
-  bottom: 200px;
-}
-.s24 .judul h1 {
-  font-size: 50px;
-}
-
+.s24 .judul,
 .flip .judul {
   left: 100px;
   bottom: 200px;
 }
+
+.s24 .judul h1,
 .flip .judul h1 {
   font-size: 50px;
 }
 
-.case .judul {
-  left: 100px;
-  bottom: 200px;
-}
-.case .judul h1 {
-  font-size: 50px;
-}
-
+.case .judul,
 .ear .judul {
   left: 100px;
   bottom: 200px;
 }
+.case .judul h1,
 .ear .judul h1 {
   font-size: 50px;
 }
 
 .card {
   border: none;
-}
-
-.btn {
-  color: darkolivegreen;
 }

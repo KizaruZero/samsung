@@ -98,7 +98,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                             <div class="deskripsi card-img-overlay text-center d-none d-lg-block">
                                 <h5 class="card-title">Boost Your Aspiration</h5>
                                 <p class="card-text">Achieve Your Goals With Samsung.</p>
-                                <a href="#" class="btn btn-primary">More Details</a>
+                                <a href="#" class="btn btn-dark rounded-5">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <div class="tombolpr card-img-overlay text-center d-none d-lg-block">
                                     <h5 class="m-1 p-0 ">Galaxy S24 | S24+</h5>
                                     <p class="m-1 p-0">Online Exclusive</p>
-                                    <a href="#" class="btn btn-primary py-0">More..</a>
+                                    <a href="#" class="btn btn-dark rounded-5 py-0">More..</a>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <div class="tombolpr card-img-overlay text-center d-none d-lg-block">
                                     <h5 class="m-1 p-0 ">Galaxy Z Flip5</h5>
                                     <p class="m-1 p-0">Online Exclusive</p>
-                                    <a href="#" class="btn btn-primary py-0">More..</a>
+                                    <a href="#" class="btn btn-dark rounded-5 py-0">More..</a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <div class="tombolpr card-img-overlay text-center d-none d-lg-block">
                                     <h5 class="m-1 p-0 ">Galaxy Z Fold5</h5>
                                     <p class="m-1 p-0">Online Exclusive</p>
-                                    <a href="#" class="btn btn-primary py-0">More..</a>
+                                    <a href="#" class="btn btn-dark rounded-5 py-0">More..</a>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <div class="tombolpr card-img-overlay text-center d-none d-lg-block">
                                     <h5 class="m-1 p-0 ">Galaxy S23 FE</h5>
                                     <p class="m-1 p-0">Online Exclusive</p>
-                                    <a href="#" class="btn btn-primary py-0">More..</a>
+                                    <a href="#" class="btn btn-dark rounded-5 py-0">More..</a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                 <img src="img/covers24.jpg" alt="" class="d-block w-100 img-fluid" />
                 <div class="judul position-absolute d-none d-lg-block">
                     <h1 class="fw-bold">Galaxy S</h1>
-                    <a href="#" class="btn btn-primary fw-bold rounded-5 py-2 px-4 mt-3">See All</a>
+                    <a href="#" class="btn btn-dark fw-bold rounded-5 py-2 px-4 mt-3">See All</a>
                 </div>
             </div>
             <div class="row text-center">
@@ -178,7 +178,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <p class="card-text fw-semibold">
                                     <?= "Rp " . number_format($types["harga"], 0, ',', '.'); ?>
                                 </p>
-                                <a href="transaksi.php?id=<?= $types["id"]; ?>" class="btn btn-primary rounded-4">Buy
+                                <a href="transaksi.php?id=<?= $types["id"]; ?>" class="btn btn-dark rounded-5">Buy
                                     Now</a>
                             </div>
                         </div>
@@ -197,7 +197,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                 <div class="judul position-absolute d-none d-lg-block">
                     <h1 class="fw-bold">Galaxy Z</h1>
                     <p class="pt-2 fs-5">Join the flip side</p>
-                    <a href="#" class="btn btn-primary fw-bold rounded-5 py-2 px-4 mt-2">See All</a>
+                    <a href="#" class="btn btn-dark fw-bold rounded-5 py-2 px-4 mt-2">See All</a>
                 </div>
             </div>
             <div class="row text-center my-3">
@@ -215,7 +215,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <p class="card-text fw-semibold">
                                     <?= "Rp " . number_format($typez["harga"], 0, ',', '.'); ?>
                                 </p>
-                                <a href="transaksi.php?id=<?= $typez["id"]; ?>" class="btn btn-primary rounded-4">Buy
+                                <a href="transaksi.php?id=<?= $typez["id"]; ?>" class="btn btn-dark rounded-5">Buy
                                     Now</a>
                             </div>
                         </div>
@@ -227,14 +227,14 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
     <!-- Galaxy Z Ends -->
 
     <!-- Galaxy A -->
-    <section id="flip" class="flip">
+    <section id="galaxya" class="flip">
         <div class="container">
             <div class="cover my-3 position-relative">
                 <img src="assetHp/galaxyA.jpg" alt="" class="d-block w-100 img-fluid" />
                 <div class="judul position-absolute d-none d-lg-block">
                     <h1 class="fw-bold">Galaxy A Series</h1>
                     <p class="pt-2 fs-5">Awesome is for everyone</p>
-                    <a href="#" class="btn btn-primary fw-bold rounded-5 py-2 px-4 mt-2">See All</a>
+                    <a href="#" class="btn btn-dark fw-bold rounded-5 py-2 px-4 mt-2">See All</a>
                 </div>
             </div>
             <div class="row text-center my-3">
@@ -252,7 +252,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <p class="card-text fw-semibold     ">
                                     <?= "Rp " . number_format($typea["harga"], 0, ',', '.'); ?>
                                 </p>
-                                <a href="transaksi.php?id=<?= $typea["id"]; ?>" class="btn btn-primary rounded-4">Buy
+                                <a href="transaksi.php?id=<?= $typea["id"]; ?>" class="btn btn-dark rounded-5">Buy
                                     Now</a>
                             </div>
                         </div>
@@ -264,14 +264,14 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
     <!-- Galaxy A Ends -->
 
     <!-- Galaxy Tab-->
-    <section id="flip" class="flip">
+    <section id="galaxytab" class="flip">
         <div class="container">
             <div class="cover my-3 position-relative">
                 <img src="assetHp/covertab.jpg" alt="" class="d-block w-100 img-fluid" />
                 <div class="judul position-absolute d-none d-lg-block">
                     <h1 class="fw-bold">Galaxy Tab Series</h1>
                     <p class="pt-2 fs-5">The connected power of Samsung Galaxy</p>
-                    <a href="#" class="btn btn-primary fw-bold rounded-5 py-2 px-4 mt-2">See All</a>
+                    <a href="#" class="btn btn-dark fw-bold rounded-5 py-2 px-4 mt-2">See All</a>
                 </div>
             </div>
             <div class="row text-center my-3">
@@ -289,7 +289,7 @@ $galaxytab = query("SELECT * FROM produkhp WHERE tipe = '$tipetab' ");
                                 <p class="card-text fw-semibold     ">
                                     <?= "Rp " . number_format($typetab["harga"], 0, ',', '.'); ?>
                                 </p>
-                                <a href="transaksi.php?id=<?= $typetab["id"]; ?>" class="btn btn-primary rounded-4">Buy
+                                <a href="transaksi.php?id=<?= $typetab["id"]; ?>" class="btn btn-dark rounded-5">Buy
                                     Now</a>
                             </div>
                         </div>
